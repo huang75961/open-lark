@@ -125,9 +125,11 @@ pub struct ApprovalInstance {
     /// 更新时间
     pub update_time: Option<String>,
     /// 表单数据
-    pub form: Option<Vec<FormData>>,
+    // pub form: Option<Vec<FormData>>,
+    pub form: Option<String>,
     /// 审批流程
-    pub timeline: Option<Vec<ApprovalNode>>,
+    // pub timeline: Option<Vec<ApprovalNode>>,
+    pub timeline: Option<Vec<TimelineNode>>,
     /// 抄送人
     pub cc_users: Option<Vec<UserInfo>>,
 }
@@ -233,6 +235,19 @@ pub struct ApprovalNode {
     pub approve_time: Option<String>,
     /// 审批意见
     pub comment: Option<String>,
+}
+
+// 时间线节点
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct TimelineNode {
+    pub create_time: String,
+    pub ext: Option<String>,
+    pub node_key: String,
+    pub open_id: String,
+    pub task_id: Option<String>,
+    #[serde(rename = "type")]
+    pub type_field: String,
+    pub user_id: String,
 }
 
 /// 任务链接
