@@ -57,6 +57,7 @@ impl ApiResponseTrait for CreateInstanceResponse {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct GetInstanceResponse {
     /// 审批实例信息
+    #[serde(flatten)]
     pub instance: ApprovalInstance,
 }
 
