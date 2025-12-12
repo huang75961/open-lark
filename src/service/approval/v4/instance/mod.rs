@@ -285,7 +285,7 @@ impl InstanceService {
             http_method: Method::GET,
             api_path: EndpointBuilder::replace_param(
                 APPROVAL_V4_INSTANCE_GET,
-                "instance_code",
+                "instance_id",
                 instance_code,
             ),
             supported_access_token_types: vec![AccessTokenType::Tenant, AccessTokenType::User],
