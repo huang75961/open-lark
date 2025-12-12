@@ -116,18 +116,30 @@ pub struct ApprovalInstance {
     pub approval_code: String,
     /// 审批定义名称
     pub approval_name: Option<String>,
+    /// open_id
+    pub open_id: String,
+    /// uuid
+    pub uuid: String,
+    /// serial_number
+    pub serial_number: String,
+    /// reverted
+    pub reverted: bool,
     /// 发起人
     pub initiator: Option<UserInfo>,
+    /// user_id
+    pub user_id: String,
     /// 审批状态
     pub status: ApprovalStatus,
     /// 创建时间
-    pub create_time: Option<String>,
+    pub start_time: Option<String>,
     /// 更新时间
     pub update_time: Option<String>,
+    /// 结束时间
+    pub end_time: Option<String>,
     /// 表单数据
     // pub form: Option<Vec<FormData>>,
     pub form: Option<String>,
-    /// 审批流程
+    /// 审批流程时间线
     // pub timeline: Option<Vec<ApprovalNode>>,
     pub timeline: Option<Vec<TimelineNode>>,
     /// 抄送人
