@@ -259,7 +259,8 @@ pub struct TimelineNode {
     pub task_id: Option<String>,
     #[serde(rename = "type")]
     pub type_field: String,
-    pub user_id: String,
+    pub user_id: Option<String>,
+    pub user_id_list: Option<Vec<String>>,
 }
 
 /// 任务链接
